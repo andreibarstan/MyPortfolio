@@ -1,0 +1,282 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+.navbar {
+    background: rgba(255, 255, 255, 1) /* fixed navbar */
+}
+
+.nav-item a:hover {
+    color: #096978 !important; /* hover colour */
+}
+.title a:hover {
+    color:black;
+}
+/* Provide sufficient contrast against white background */
+a {
+  color: black;
+  font-size:16px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #17a2b7 !important;
+    border-color: #096978 !important;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+    color: #fff;
+    background-color: #096978 !important;
+    border-color: black !important;
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #17a2b7;
+    border-color: #096978;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .5);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+*, html, body {
+    scroll-behavior: smooth !important;
+}
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-top:70px;
+  margin-bottom: 0px;
+  overflow-y:hidden;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+
+/* Configuration of each page/section of the single page website */
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start; /* smooth scrolling between sections */
+}
+
+/* smooth scrolling */
+.container-fluid {
+    padding: 0 !important;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    height: 100vh;
+}
+
+/* section background images*/
+#showcase{
+    background-image: url("../images/indexpage/bg1.jpg");
+    background-repeat:no-repeat;
+    background-size:auto 100%;
+    padding-top: 50vh;
+    padding-bottom: 50vh;
+}
+#projects {
+    background-image: url("../images/indexpage/bg2.jpg");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    padding-top: 50vh;
+    padding-bottom: 50vh;
+}
+#contact {
+    background-image: url("../images/indexpage/bg3.jpg");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    padding-top: 50vh;
+    padding-bottom: 50vh;
+}
+#about {
+    background-image: url("../images/indexpage/bg4.jpg");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    padding-top: 50vh;
+    padding-bottom: 50vh;
+}
+
+/* my projects section */
+
+.install span {
+    font-size: 12px;
+}
+.card-body {
+    padding:5px !important;
+}
+.card {
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow .3s;
+    border-radius: 8px;
+    border: 3px solid #096978;
+}
+.card .card-overlay {
+    background: rgba(9,105,120,1);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+}
+.card:hover .card-overlay {
+    opacity: 1;
+}
+
+.card img {
+    min-width: 200px;
+    min-height: 150px;
+    max-height: 18vh;
+}
+.card:hover {
+    box-shadow: 0 0 20px rgba(33,33,33,1);
+}
+.card-body {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.card-body {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+.card-details {
+    opacity: 0;
+    position: absolute;
+    bottom: 35px;
+    transition: all 0.3s ease-in-out 0s;
+}
+.card:hover .card-details {
+    opacity: 1;
+}
+.card-body h5 {
+    color: #fff;
+    margin-bottom:30px;
+}
+.buttons {
+    position: absolute;
+    bottom: 2px;
+    padding:5px;
+    width:100%;
+}
+.card img {
+    width: 100%;
+    transition: 0.5s all ease-in-out;
+}
+
+.card:hover img {
+    opacity: 0.05;
+    transform: scale(1.5)
+}
+.text-dark {
+    font-size:16px;
+}
+.title.bg-info {
+    opacity: 0.8;
+    border-radius:25px;
+    color:white;
+}
+.title.bg-info:hover {
+    opacity: 1;
+    transition: 0.3s all ease-in-out;
+    border-radius: 25px;
+    color:black;
+}
+.col-6 {
+    padding:5px;
+}
+.card a {
+    margin-bottom:0;
+}
+
+
+/* Social Icons */
+#social_side_links {
+    position: fixed;
+    top: 80px;
+    left: 5px;
+    padding: 0;
+    list-style: none;
+    z-index: 99;
+}
+
+#social_side_links li a {
+    display: block;
+    border-radius: 50px;
+    margin-bottom:5px;
+}
+
+#social_side_links li a img {
+    display: block;
+    max-width: 50px;
+    border-radius: 50px;
+    background: #17a2b7;
+    -webkit-transition: background .2s ease-in-out;
+    -moz-transition: background .2s ease-in-out;
+    -o-transition: background .2s ease-in-out;
+    transition: background .2s ease-in-out;
+}
+
+#social_side_links li a:hover img {
+    border-radius: 50px;
+    background-color: transparent;
+}
+
+/*skills in about section*/
+.col-12 {
+    padding:0;
+}
+.col-12 img {
+    max-width:24%;
+}

@@ -1,0 +1,164 @@
+﻿@model SendMailDTO
+
+<!--Hero section main page-->
+
+<section id="showcase" class="bg-image">
+    <div class="container">
+        <h1 class="title text-center p-3 mb-2 bg-info font-weight-bold">Hi, I'm Andrei. I design & build user interfaces</h1>
+        <br><br><br><br />
+        <div class="title mb-0">
+            <a class="font-weight-bold text-decoration-none" href="#projects">
+                <h2 class="title text-center">See some of my projects below</h2>
+                <h2 class="text-center "><i class="fa-solid fa-angle-down title bg-info cir p-3"></i></h2>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!--Projects Section-->
+<section id="projects">
+    <div class="container">
+        <h1 class="text-center mb-5"><i class="fas fa-laptop-code mr-2"></i>My projects</h1>
+        <div class="row justify-content-center">
+            <div class="col-6 col-lg-4">
+                <div class="card">
+                    <div class="card-overlay"></div>
+                    <img src="./images/indexpage/proj1.jpg" class="img-fluid" alt="Responsive image">
+                    <div class="card-body fade-top">
+                        <h5 class="card-details">Web application containing various e-Commerce components</h5>
+                        <div class="buttons">
+                            <a href="http://andreiioanb4889.ccacolchester.com/web3/index.php" class="btn btn-primary float-left ">Website</a>
+                            <a href="https://github.com/andreibarstan/VanillaPHP_Ecommerce" class="btn btn-primary float-right mr-2">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-lg-4">
+                <div class="card">
+                    <div class="card-overlay"></div>
+                    <img src="./images/indexpage/proj2.jpg" class="img-fluid" alt="Responsive image">
+                    <div class="card-body fade-top">
+                        <h5 class="card-details">My portfolio website created with .NET6 </h5>
+                        <div class="buttons">
+                            <a href="https://andreibarstan.herokuapp.com/" class="btn btn-primary float-left ">Website</a>
+                            <a href="https://github.com/andreibarstan/MyPortfolio" class="btn btn-primary float-right mr-2">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-lg-4">
+                <div class="card">
+                    <div class="card-overlay"></div>
+                    <img src="./images/indexpage/proj3.jpg" class="img-fluid" alt="Responsive image">
+                    <div class="card-body fade-top">
+                        <h5 class="card-details">Hotel calendar application handling database-stored events</h5>
+                        <div class="buttons">
+                            <a href="https://github.com/andreibarstan/CICA" class="btn btn-primary text-center">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-lg-4">
+                <div class="card">
+                    <div class="card-overlay"></div>
+                    <img src="./images/indexpage/proj4.jpg" class="img-fluid" alt="Responsive image">
+                    <div class="card-body fade-top">
+                        <h5 class="card-details">Python price tracker with automated email notifications </h5>
+                        <div class="buttons">
+                            <a href="https://github.com/andreibarstan/WebScraper_AmazonProductPriceAlert" class="btn btn-primary text-center">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-lg-4">
+                <div class="card">
+                    <div class="card-overlay"></div>
+                    <img src="./images/indexpage/proj5.jpg" class="img-fluid" alt="Responsive image">
+                    <div class="card-body fade-top">
+                        <h5 class="card-details">Application using an API to access quiz questions </h5>
+                        <div class="buttons">
+                            <a href="https://github.com/andreibarstan/TriviaQuiz" class="btn btn-primary text-center">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-lg-4">
+                <div class="card">
+                    <div class="card-overlay"></div>
+                    <img src="./images/indexpage/proj6.jpg" class="img-fluid" alt="Responsive image">
+                    <div class="card-body fade-top">
+                        <h5 class="card-details">Dynamic email notifications sent to matching records</h5>
+                        <div class="buttons">
+                            <a href="https://github.com/andreibarstan/automatic_birthday_wisher" class="btn btn-primary text-center">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Contact Us Section-->
+<section id="contact">
+    <div class="container">
+        <div class="row justify-content-between text-white p-3">
+            <div class="col-md-9 col-lg-7 pt-2">
+                <h1 class="w-100 p-2 text-center"><i class="fas fa-phone-alt mr-2 "></i>Contact</h1>
+                <a href="mailto:andreibarstan@gmail.com"><h5 class="mx-3 w-100 pt-2 text-white text-decoration-none">andreibarstan@gmail.com</h5></a>
+                <h5 class="mx-3 w-100 "><strong>07473579002</strong></h5>
+                <h5 class="mx-2 w-100 p-2">Or submit the form below for any inquiries</h5>
+                <form method="post" asp-area="" asp-controller="Home" asp-action="Index">
+                    <input type="hidden" />
+                    <div class="form-group">
+                        <label asp-for="@Model.Name">Name <span class="text-white bg-info" asp-validation-for="@Model.Name"></span></label>
+                        <input type="text" asp-for="@Model.Name" class="form-control" />               
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="@Model.Email">Email <span class="text-white bg-info" asp-validation-for="@Model.Email"></span></label>
+                        <input type="text" asp-for="@Model.Email" class="form-control" />             
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="@Model.Subject">Subject <span class="text-white bg-info" asp-validation-for="@Model.Subject"></span></label>
+                        <input type="text" asp-for="@Model.Subject" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="@Model.Message">Message <span class="text-white bg-info" asp-validation-for="@Model.Message"></span></label>
+                        <textarea type="text" asp-for="@Model.Message" id="Message" cols="20" rows="6" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group text-center">
+                        <button type="submit" value="Send Email" class="btn btn-primary">Send Email</button>
+                    </div>
+                    <h2 class="text-center">@ViewBag.Message</h2>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--About Us Section-->
+<section id="about">
+    <div class="container bg-image">
+        <div class="about-us section">
+            <h1 class=" text-center w-100"><i class="fas fa-chalkboard-teacher mr-2"></i>About me</h1>
+            <h3 class=" text-center w-100 p-5"></h3>
+            <div class="text-center mt-1">
+                <a href="~/AndreiBarstanCV.pdf" class="btn btn-primary text-center p-3 mb-5"><h4>View my CV</h4></a>
+            </div>
+            <h3 class=" text-center w-100 pt-3">To complete my projects, I've used the following:</h3>
+            <div class="row justify-content-center pt-2">
+                <div class="col-12 col-md-6 justify-content-center">
+                    <img src="./images/socialmedialogo/html5.png" alt="logo">
+                    <img src="./images/socialmedialogo/css.png" alt="logo">
+                    <img src="./images/socialmedialogo/js.png" alt="logo">
+                    <img src="./images/socialmedialogo/bootstrap.png" alt="logo">
+                </div>
+                <div class="col-12 col-md-6 justify-content-center">
+                    <img src="./images/socialmedialogo/python.png" alt="logo">
+                    <img src="./images/socialmedialogo/net.png" alt="logo">
+                    <img src="./images/socialmedialogo/php.png" alt="logo">
+                    <img src="./images/socialmedialogo/sql.png" alt="logo">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

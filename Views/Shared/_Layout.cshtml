@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="./css/fontawesome/css/all.min.css" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+    <body>
+        <header>
+            <nav class="navbar fixed-top navbar-expand-md navbar-toggleable-md navbar-light border-bottom box-shadow mb-3">
+                <div class="container">
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="/images/indexpage/logo.png" height="45"><strong>Andrei Barstan</strong></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse d-md-inline-flex justify-content-between">
+                        <ul class="navbar-nav flex-grow-1 ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark mt-1 ml-3" href="~/AndreiBarstanCV.pdf"><h5><i class="fa-regular fa-address-card"></i> CV</h5></a>
+                            </li>
+                         </ul>
+                         <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark mt-1" href="#projects"><h5><i class="fas fa-laptop-code mr-1"></i>Projects</h5></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark mt-1" href="#contact"><h5><i class="fas fa-phone-alt mr-1"></i>Contact</h5></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark mt-1" href="#about"><h5><i class="fas fa-chalkboard-teacher mr-1"></i>About</h5></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="container-fluid">
+            <!-- Social Icons -->
+            <ul id="social_side_links">
+                <li><a href="https://github.com/andreibarstan" target="_blank"><img src="./images/socialmedialogo/github.png" alt="logo" /></a></li>
+                <li><a href="mailto:andreibarstan@gmail.com" target="_blank"><img src="./images/socialmedialogo/email.png" alt="logo" /></a></li>
+                <li><a href="https://www.linkedin.com/in/andrei-barstan/" target="_blank"><img src="./images/socialmedialogo/linkedin.png" alt="logo" /></a></li>
+
+            </ul>
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+         
+    @*  <footer class="border-top footer text-muted">
+            <div class="container">
+                &copy; 2022 - MyPortfolio - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
+        </footer>*@
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+
+        @await RenderSectionAsync("Scripts", required: false)
+    </body>
+</html>
